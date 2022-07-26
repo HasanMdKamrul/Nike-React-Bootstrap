@@ -2,6 +2,11 @@
   --head-bg-color: #fff9f4;
   --button-color: #3745c6;
   --highlighted-text-color: #fa814d;
+  --text-title-color: #363a58;
+}
+
+.title {
+  color: var(--text-title-color);
 }
 
 .bg-header {
@@ -18,4 +23,10 @@
 
 .btn-color:hover {
   background-color: #13208c;
+}
+
+@media only screen and (max-width: 576px) {
+  .sm-text-align {
+    text-align: center;
+  }
 }
