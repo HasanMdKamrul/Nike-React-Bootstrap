@@ -47,6 +47,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
+                <button type="button" class="btn">
+                  Notifications <span class="badge text-bg-secondary">4</span>
+                </button>
                 <li class="nav-item ms-auto">
                   <a
                     class="nav-link active"
@@ -121,10 +124,15 @@
                       typesetting industry.
                     </p>
                     <button
-                      class="btn btn-color text-white text-uppercase btn-lg"
+                      class="btn btn-primary text-white text-uppercase btn-lg"
+                      type="button"
+                      id="liveAlertBtn"
                     >
                       <i class="fa-solid fa-cart-plus me-2"></i> Buy Now
                     </button>
+                    <br />
+                    <br />
+                    <div id="liveAlertPlaceholder"></div>
                   </div>
                 </div>
               </div>
@@ -590,6 +598,30 @@
       <!-- Modals -->
     </main>
     <!-- ** Bootstrap JS  -->
+
+    <script>
+      const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+
+      const alert = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder.append(wrapper);
+      };
+
+      const alertTrigger = document.getElementById("liveAlertBtn");
+      if (alertTrigger) {
+        alertTrigger.addEventListener("click", () => {
+          alert("Your product is added to cart!");
+        });
+      }
+    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
