@@ -1,0 +1,9 @@
+::root {
+  --head-bg-color: #fff9f4;
+  --button-color: #3745c6;
+  --amount-color: #fa814d;
+}
+
+.bg-header {
+  background-color: var(--head-bg-color);
+}
