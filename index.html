@@ -48,7 +48,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item ms-auto">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#home"
+                    id="home"
                     >Home</a
                   >
                 </li>
@@ -211,6 +215,37 @@
     </header>
     <!-- ** Header Ends -->
     <main>
+      <!-- ** Toast  -->
+      <section
+        class="container"
+        style="position: relative; left: 950px; bottom: -100px"
+      >
+        <div
+          class="toast show"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <img
+              style="width: 20px"
+              class="img-fluid"
+              src="./shoe.png"
+              class="rounded me-2"
+              alt="..."
+            />
+            <strong class="me-auto">Shoe Size</strong>
+            <small>11 mins ago</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">Choose your shoe size</div>
+        </div>
+      </section>
       <!-- Shoes Card -->
       <section class="container">
         <h1 class="text-success text-uppercase my-5 sm-text-align">
@@ -400,9 +435,10 @@
         </div>
       </section>
       <!-- Shoes Card -->
+      <!-- Contact us -->
       <section class="container my-5 py-5">
         <!-- ** Why Choose Us -->
-        <div class="row">
+        <div class="row gx-5">
           <div class="col-lg-5">
             <div class="row gy-3">
               <div class="col-12 shadow-lg p-4 rounded-4">
@@ -469,6 +505,30 @@
           </div>
         </div>
       </section>
+      <!-- Contact us -->
+      <!-- pagination -->
+      <section class="container my-5">
+        <div class="d-flex justify-content-center">
+          <nav aria-label="#home">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link active" href="#home">1</a>
+              </li>
+              <li class="page-item" aria-current="page">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- pagination -->
     </main>
     <!-- ** Bootstrap JS  -->
     <script
