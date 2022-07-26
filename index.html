@@ -599,11 +599,13 @@
       <!-- offcanvas -->
       <section class="container p-5 text-center bg-warning my-5">
         <button
-          class="btn btn-primary"
+          class="btn btn-danger btn-lg tt"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#staticBackdrop"
           aria-controls="staticBackdrop"
+          data-bs-placement="top"
+          title="Sign-in Here!"
         >
           Sign-in
         </button>
@@ -663,7 +665,13 @@
                     >Check me out</label
                   >
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  title="Sign-in Here!"
+                >
+                  Sign in
+                </button>
               </form>
             </div>
           </div>
@@ -701,5 +709,9 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tooltips = document.querySelectorAll(".tt");
+      tooltips.forEach((t) => new bootstrap.Tooltip(t));
+    </script>
   </body>
 </html>
