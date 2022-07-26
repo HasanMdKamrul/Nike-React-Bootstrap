@@ -529,6 +529,65 @@
         </div>
       </section>
       <!-- pagination -->
+      <!-- Modals -->
+      <section class="container text-center p-5 bg-info">
+        <button
+          type="button"
+          class="btn btn-dark btn-lg"
+          data-bs-toggle="modal"
+          data-bs-target="#mymodal"
+          data-bs-whatever="@mdo"
+        >
+          Subscribe
+        </button>
+
+        <div
+          class="modal fade"
+          id="mymodal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="mymodal">Subscribe to our Shop</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="email" class="col-form-label">Email:</label>
+                    <input type="text" class="form-control" id="email" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="special-note" class="col-form-label"
+                      >Special-Note:</label
+                    >
+                    <textarea class="form-control" id="special-note"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modals -->
     </main>
     <!-- ** Bootstrap JS  -->
     <script
